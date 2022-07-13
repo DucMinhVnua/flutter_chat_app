@@ -42,7 +42,8 @@ class InputFieldIcon extends StatelessWidget {
               decoration: InputDecoration(
                   contentPadding: EdgeInsets.symmetric(horizontal: 20),
                   hintText: placeholder,
-                  hintStyle: TextStyle(color: placeholderColor),
+                  hintStyle:
+                      TextStyle(color: placeholderColor, letterSpacing: 1.2),
                   enabledBorder: InputBorder.none,
                   focusedBorder: InputBorder.none),
             ),

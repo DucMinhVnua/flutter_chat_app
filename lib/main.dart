@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_chat_app/src/pages/login_page.dart';
+import 'package:flutter_chat_app/src/pages/register_page.dart';
 import 'package:get/get.dart';
 
 void main() {
@@ -15,28 +16,28 @@ class MyApp extends StatelessWidget {
     bool isLogin = true;
     return GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        initialRoute: isLogin ? '/login/' : '/listChat/',
+        initialRoute: isLogin ? LoginPage().routeName : '/listChat/',
         getPages: [
           GetPage(
-            name: '/login/',
-            page: () => LoginPage(),
-          ),
+              name: LoginPage().routeName,
+              page: () => LoginPage(),
+              transition: Transition.leftToRight),
           GetPage(
-            name: '/register/',
-            page: () => Container(),
-          ),
+              name: RegisterPage().routeName,
+              page: () => RegisterPage(),
+              transition: Transition.leftToRight),
           GetPage(
-            name: '/listChat/',
-            page: () => Container(),
-          ),
+              name: '/listChat/',
+              page: () => Container(),
+              transition: Transition.leftToRight),
           GetPage(
-            name: '/chatGroup/',
-            page: () => Container(),
-          ),
+              name: '/chatGroup/',
+              page: () => Container(),
+              transition: Transition.leftToRight),
           GetPage(
-            name: '/chatSingle/',
-            page: () => Container(),
-          )
+              name: '/chatSingle/',
+              page: () => Container(),
+              transition: Transition.leftToRight)
         ]);
   }
 }
