@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 
-class Colors {
+class AppColors {
   final textPlaceholder = const Color(0xff8D8D8D);
   final lightBlue = const Color(0xff03A9F1);
   final lightGray = const Color(0xff565E70);
